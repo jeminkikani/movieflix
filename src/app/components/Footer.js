@@ -129,7 +129,7 @@ const Footer = () => {
         <div className={footerStyles["bottom-details"]}>
           <div className={footerStyles.bottom_text}>
             <span className={footerStyles.copyright_text}>
-              Copyright © 2023
+              Copyright © {new Date().getFullYear()}
               <Link href="/>"> Jemin Kikani.</Link> All rights reserved
             </span>
             <span className={footerStyles.policy_terms}>

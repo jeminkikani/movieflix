@@ -95,7 +95,7 @@ const ContactForm = () => {
         <label htmlFor="phone" className={styles.label}>
           Phone Number
           <input
-            type="number"
+            type="text"
             name="phone"
             id="phone"
             placeholder="Enter your phone"

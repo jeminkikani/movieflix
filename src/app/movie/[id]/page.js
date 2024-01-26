@@ -22,8 +22,7 @@ const Page = async ({ params }) => {
   return (
     <div className={styles.container}>
       <h2 className={styles.movie_title}>
-        {" "}
-        Netflix \ <span> {main_data.type} </span>{" "}
+        Netflix \ <span> {main_data.type} </span>
       </h2>
       <div className={styles.card_section}>
         <div>
