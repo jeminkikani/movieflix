@@ -11,10 +11,14 @@
   "dependencies": {
     "eslint": "8.38.0",
     "eslint-config-next": "13.3.0",
+    "jsonwebtoken": "^9.0.2",
     "mongoose": "^7.0.3",
     "next": "13.3.0",
+    "next-auth": "^4.24.5",
+    "passport-google-oauth20": "^2.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-google-login": "^5.2.2",
     "react-icons": "^4.8.0"
   }
 }

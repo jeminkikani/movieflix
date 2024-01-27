@@ -76,6 +76,10 @@
   line-height: 1.6;
 }
 
+.like {
+  margin: 10px;
+}
+
 /*not found page styling */
 .error_page {
   width: 100%;

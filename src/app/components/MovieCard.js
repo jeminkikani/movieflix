@@ -18,9 +18,11 @@ const MovieCard = (curElem) => {
         <div className={styles.card_data}>
           <h2>{title.substring(0, 18)}</h2>
           <p>{`${synopsis.substring(0, 66)} ...`}</p>
-
           <Link href={`/movie/${id}`}>
             <button>Read More</button>
+          </Link>
+          <Link href={"/favorite"}>
+            <button className={styles.like}>❤️ Like</button>
           </Link>
         </div>
       </div>
