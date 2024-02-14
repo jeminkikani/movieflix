@@ -1,15 +1,17 @@
+"use client";
+import { useState } from "react";
 import styles from "@/app/styles/navbar.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import Nav from "@/app/components/Nav";
-// import { signIn, signOut, useSession } from "next-auth/react";
+import { signIn } from "next-auth/react";
 
 const Header = () => {
-  //   const { data: session } = useSession();
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  //   const loginWithGoogle = () => {
-  //     signIn("google");
-  //   };
+  const loginWithGoogle = () => {
+    signIn("google");
+  };
 
   return (
     <header className={styles.main_header}>
@@ -28,17 +30,18 @@ const Header = () => {
         className={styles.login_button}
         style={{ display: "flex", alignItems: "center" }}
       >
-        <Link href="/favorite" style={{ margin: "0" }}>
+        {/* <Link href="/favorite" style={{ margin: "0" }}>
           <button className={styles.fav}>Favorite</button>
         </Link>
         <div className="one">
-          <button className="two">Login</button>
-          {/* {session ? (
+          {isLoggedIn ? (
             <button onClick={() => signOut()}>Logout</button>
           ) : (
-            <button onClick={loginWithGoogle}>Login with Google</button>
+            <button className="two" onClick={loginWithGoogle}>
+              Login with Google
+            </button>
           )} */}
-        </div>
+        {/* </div> */}
       </div>
     </header>
   );

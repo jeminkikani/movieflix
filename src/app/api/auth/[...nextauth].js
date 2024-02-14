@@ -1,23 +1,13 @@
-import NextAuth from "next-auth";
-import Providers from "next-auth/providers";
+import NextAuth from "next-auth/next";
+import GoogleProviders from "next-auth/providers/google";
 
 export default NextAuth({
   providers: [
-    Providers.Google({
+    GoogleProviders({
       clientId: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     }),
-    // Add other providers if needed
   ],
-  database: process.env.DATABASE_URL,
-  callbacks: {
-    async signIn(user, account, profile) {
-      // If needed, you can customize the signIn callback
-      return true;
-    },
-    async session(session, user) {
-      // If needed, you can customize the session callback
-      return session;
-    },
-  },
 });
+
+export { handler as GET, handler as POST, handler as PUT, handler as DELETE };

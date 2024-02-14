@@ -2,6 +2,7 @@ import "./globals.css";
 import Header from "@/app/components/Header";
 import { Mulish } from "next/font/google";
 import Footer from "@/app/components/Footer";
+import { NextAuthProvider } from "./providers";
 
 const mulish = Mulish({
   weight: ["300", "400", "500", "600", "700", "800", "900"],
